@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*Sintax Untuk Mengatur Design Tampilan Body Website*/
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/background3.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+/*Sintax Untuk Mengatur Design Background Bagian Penampil Dskripsi Cuaca Pada Website*/
+.container{
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: rgba(255, 255, 255, -1);
+    backdrop-filter: blur(30px);
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+/*Sintax Untuk Mengatur Design Bagian Penampil Negara Yang Tertuju Pada Website*/
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #ffff;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: transparent;
+    padding-left: 50px;
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffff;
+    text-transform: capitalize;
+}
+
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #ffff;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+/*Sintax Untuk Mengatur Design Background Bagian Button Penampil Cuaca Pada Website*/
+.search-box button:hover{
+    color: #363C50;
+    background: transparent;
+}
+
+.search-box i{
+    position: absolute;
+    color: #ffff;
+    font-size: 28px;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+/*Sintax Untuk Mengatur Design Image Bagian Penampil Cuaca Pada Website*/
+.weather-box img{
+    width: 80%;
+    margin-top: -15px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+/*Sintax Untuk Mengatur Design Temperature Bagian Penampil Cuaca Pada Website*/
+.weather-box .temperature{
+    position: relative;
+    color: #ffff;
+    font-size: 4rem;
+    line-height: 1.10;
+    font-weight: 800;
+    margin-top: 3px;
+    margin-left: -4px;
+}
+
+.weather-box .temperature span{
+    position: relative;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+/*Sintax Untuk Mengatur Design Text Deskripsi Temperature Bagian Penampil Cuaca Pada Website*/
+.weather-box .description{
+    color: #ffff;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+/*Sintax Untuk Mengatur Padding antar Temperature dengan Humidity Bagian Penampil Cuaca Pada Website*/
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/*Sintax Untuk Mengatur Padding antar Temperature Dengan Wind Speed Bagian Penampil Cuaca Pada Website*/
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/*Sintax Untuk Mengatur Padding antar Icon Humidity Dengan Description Bagian Penampil Cuaca Pada Website*/
+.weather-details i{
+    color: #ffff;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-details span{
+    color: #ffff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/*Sintax Untuk Mengatur Deskripsi Bagian Penampil Cuaca Pada Website*/
+.weather-details p{
+    color: #ffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*Sintax Untuk Mengatur Reminder Not Found Bagian Penampil Cuaca Pada Website Apabila Terjadi Kesalahan Pengimputan*/
+.not-found{
+    width: 103%;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 10px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+/*Sintax Untuk Mengatur Image Error Bagian Error Not Found Pada Website*/
+.not-found img{
+    width: 70%;
+}
+
+/*Sintax Untuk Mengatur Deskripsi Error Not Found Bagian Penampil Cuaca Pada Website*/
+.not-found p{
+    color: #ffff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather-box, .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+/*Sintax Untuk Mengatur Design Animasi Bagian Penampil Cuaca Pada Website*/
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
